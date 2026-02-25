@@ -1,0 +1,35 @@
+name: AI Issue Labelling
+on:
+  issues:
+    types:
+      - labeled
+
+permissions:
+  contents: read
+  issues: write
+  models: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  ai-label:
+    if: "github.event.label.name == 'ai: label'"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Label issue using AI
+        uses: pelikhan/action-genai-issue-labeller@v0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          instructions: ${{ vars.AI_LABEL_INSTRUCTIONS }}
+          debug: ${{ vars.AI_LABEL_DEBUG }}
+
+      - name: Remove AI label trigger
+        if: ${{ always() }}
+        run: |
+          gh issue edit ${{ github.event.issue.number }} --remove-label 'ai: label'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
