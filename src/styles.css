@@ -3,6 +3,9 @@
 @import "tailwindcss";
 @import "tailwindcss-primeui";
 
+@import "./app/styles/colors.css";
+@import "./app/styles/typography.css";
+
 /* Equalizer animations */
 @keyframes shorteq{
   0% {height: 70%}

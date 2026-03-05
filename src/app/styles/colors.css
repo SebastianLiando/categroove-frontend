@@ -1,0 +1,92 @@
+@theme {
+  /* Primary color */
+  --color-violet-50: oklch(0.957 0.02 289.15);
+  --color-violet-100: oklch(0.916 0.039 287.21);
+  --color-violet-200: oklch(0.832 0.084 287.5);
+  --color-violet-300: oklch(0.75 0.127 286.53);
+  --color-violet-400: oklch(0.66 0.176 284.59);
+  --color-violet-500: oklch(0.582 0.219 281.86);
+  --color-violet-600: oklch(0.502 0.26 277.89);
+  --color-violet-700: oklch(0.427 0.251 275.91);
+  --color-violet-800: oklch(0.333 0.196 275.63);
+  --color-violet-900: oklch(0.241 0.142 276.14);
+  --color-violet-950: oklch(0.191 0.112 275.27);
+
+  /* Accent color */
+  --color-spotify-green-50: oklch(0.959 0.068 150.14);
+  --color-spotify-green-100: oklch(0.915 0.146 149.69);
+  --color-spotify-green-200: oklch(0.829 0.225 148.99);
+  --color-spotify-green-300: oklch(0.763 0.207 148.86);
+  --color-spotify-green-400: oklch(0.689 0.187 148.92);
+  --color-spotify-green-500: oklch(0.596 0.161 148.97);
+  --color-spotify-green-600: oklch(0.502 0.136 148.92);
+  --color-spotify-green-700: oklch(0.41 0.111 148.8);
+  --color-spotify-green-800: oklch(0.319 0.087 148.71);
+  --color-spotify-green-900: oklch(0.224 0.061 149.06);
+  --color-spotify-green-950: oklch(0.183 0.05 147.96);
+
+  /* Surface color */
+  /* Light */
+  --color-ghost-50: oklch(0.979 0.003 264.7);
+  --color-ghost-100: oklch(0.931 0.01 267.41);
+  --color-ghost-200: oklch(0.844 0.023 263.19);
+  --color-ghost-300: oklch(0.758 0.036 261.93);
+  --color-ghost-400: oklch(0.672 0.05 259.47);
+  --color-ghost-500: oklch(0.577 0.044 261.4);
+  --color-ghost-600: oklch(0.49 0.037 261.59);
+  --color-ghost-700: oklch(0.407 0.03 259.75);
+  --color-ghost-800: oklch(0.32 0.024 261.18);
+  --color-ghost-900: oklch(0.225 0.016 256.81);
+  --color-ghost-950: oklch(0.177 0.013 264.15);
+
+  /* Dark */
+  --color-eerie-50: oklch(0.958 0.01 267.41);
+  --color-eerie-100: oklch(0.923 0.018 272.34);
+  --color-eerie-200: oklch(0.846 0.036 269.88);
+  --color-eerie-300: oklch(0.759 0.06 268.86);
+  --color-eerie-400: oklch(0.682 0.08 266.28);
+  --color-eerie-500: oklch(0.606 0.091 264.14);
+  --color-eerie-600: oklch(0.527 0.081 264.93);
+  --color-eerie-700: oklch(0.448 0.068 264.83);
+  --color-eerie-800: oklch(0.372 0.055 263.55);
+  --color-eerie-900: oklch(0.286 0.043 263.53);
+  --color-eerie-950: oklch(0.25 0.038 266.24);
+
+  /* Music tag badge colors */
+  --color-badge-purple-light-500: oklch(0.606 0.219 292.73);
+  --color-badge-purple-light-200: oklch(0.854 0.087 301.85);
+
+  --color-badge-purple-dark-500: oklch(0.709 0.159 293.55);
+  --color-badge-purple-dark-200: rgba(167, 139, 250, 0.25);
+
+  --color-badge-blue-light-500: oklch(0.623 0.188 259.81);
+  --color-badge-blue-light-200: oklch(0.847 0.071 271.55);
+
+  --color-badge-blue-dark-500: #60A5FA;
+  --color-badge-blue-dark-200: rgba(96, 165, 250, 0.25);
+
+  --color-badge-teal-light-400: oklch(0.704 0.123 182.49);
+  --color-badge-teal-light-100: oklch(0.947 0.051 187.14);
+
+  --color-badge-teal-dark-400: #2DD4BF;
+  --color-badge-teal-dark-100: rgba(45, 212, 191, 0.25);
+
+  --color-badge-coral-light-400: oklch(0.709 0.188 47.89);
+  --color-badge-coral-light-100: oklch(0.925 0.037 32.39);
+
+  --color-badge-coral-dark-400: #FB923C;
+  --color-badge-coral-dark-100: rgba(251, 146, 60, 0.25);
+
+  --color-badge-pink-light-500: oklch(0.656 0.212 354.32);
+  --color-badge-pink-light-200: oklch(0.882 0.063 347.52);
+
+  --color-badge-pink-dark-500: #F472B6;
+  --color-badge-pink-dark-200: rgba(244, 114, 182, 0.25);
+
+  --color-badge-amber-light-300: oklch(0.769 0.165 70.07);
+  --color-badge-amber-light-100: oklch(0.936 0.05 79.84);
+
+  --color-badge-amber-dark-300: #FBBF24;
+  --color-badge-amber-dark-100: rgba(251, 191, 36, 0.25);
+
+}
