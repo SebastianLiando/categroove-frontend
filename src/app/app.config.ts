@@ -3,7 +3,7 @@ import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
 import {providePrimeNG} from 'primeng/config';
-import Aura from '@primeuix/themes/aura';
+import {categroovePreset} from './styles/categroove-preset';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
       {
         ripple: true,
         theme: {
-          preset: Aura,
+          preset: categroovePreset,
           options: {
             cssLayer: {
               name: 'primeng',
