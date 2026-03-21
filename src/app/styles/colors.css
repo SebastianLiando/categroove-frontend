@@ -27,6 +27,7 @@
 
   /* Surface color */
   /* Light */
+  --color-ghost-0: oklch(0.991 0 89.876);
   --color-ghost-50: oklch(0.979 0.003 264.7);
   --color-ghost-100: oklch(0.931 0.01 267.41);
   --color-ghost-200: oklch(0.844 0.023 263.19);
