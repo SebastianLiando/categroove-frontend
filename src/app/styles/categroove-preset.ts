@@ -23,17 +23,18 @@ export const categroovePreset = definePreset(Aura, {
           mutedColor: '#9CA3AF'
         },
         surface: {
-          50: '{ghost.50}',
-          100: '{ghost.100}',
-          200: '{ghost.200}',
-          300: '{ghost.300}',
-          400: '{ghost.400}',
-          500: '{ghost.500}',
-          600: '{ghost.600}',
-          700: '{ghost.700}',
-          800: '{ghost.800}',
-          900: '{ghost.900}',
-          950: '{ghost.950}'
+          0: 'var(--color-ghost-50)',
+          50: 'var(--color-ghost-50)',
+          100: 'var(--color-ghost-100)',
+          200: 'var(--color-ghost-200)',
+          300: 'var(--color-ghost-300)',
+          400: 'var(--color-ghost-400)',
+          500: 'var(--color-ghost-500)',
+          600: 'var(--color-ghost-600)',
+          700: 'var(--color-ghost-700)',
+          800: 'var(--color-ghost-800)',
+          900: 'var(--color-ghost-900)',
+          950: 'var(--color-ghost-950)',
         }
       },
       dark: {
@@ -42,17 +43,17 @@ export const categroovePreset = definePreset(Aura, {
           mutedColor: '#9CA3AF'
         },
         surface: {
-          50: '{eerie.50}',
-          100: '{eerie.100}',
-          200: '{eerie.200}',
-          300: '{eerie.300}',
-          400: '{eerie.400}',
-          500: '{eerie.500}',
-          600: '{eerie.600}',
-          700: '{eerie.700}',
-          800: '{eerie.800}',
-          900: '{eerie.900}',
-          950: '{eerie.950}'
+          50: 'var(--color-ghost-50)',
+          100: 'var(--color-ghost-100)',
+          200: 'var(--color-ghost-200)',
+          300: 'var(--color-ghost-300)',
+          400: 'var(--color-ghost-400)',
+          500: 'var(--color-ghost-500)',
+          600: 'var(--color-ghost-600)',
+          700: 'var(--color-ghost-700)',
+          800: 'var(--color-ghost-800)',
+          900: 'var(--color-ghost-900)',
+          950: 'var(--color-ghost-950)',
         }
       }
     }

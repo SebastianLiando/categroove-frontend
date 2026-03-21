@@ -9,7 +9,7 @@ import {NgStyle} from '@angular/common';
   templateUrl: './equalizer.html',
   styleUrl: './equalizer.css',
   host: {
-    class: 'w-full flex flex-row items-end gap-x-1'
+    class: 'flex flex-row items-end gap-x-1'
   }
 })
 export class Equalizer {
