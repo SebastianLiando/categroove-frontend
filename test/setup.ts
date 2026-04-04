@@ -1,4 +1,4 @@
-import {beforeEach, vi} from 'vitest';
+import {beforeEach, expect, vi} from 'vitest';
 
 Object.defineProperty(globalThis, 'matchMedia', {
   writable: true,
@@ -23,4 +23,15 @@ Object.defineProperty(globalThis, 'location', {
 
 beforeEach(() => {
   globalThis.location.href = baseAddress
+})
+
+// === Custom vitest matchers ===
+expect.extend({
+  toBeBlank(received) {
+    const {isNot} = this
+    return {
+      pass: received !== null && received !== undefined && typeof received === 'string' && received.trim() === '',
+      message: () => `expected ${received} to${isNot ? ' not' : ''} be blank`
+    }
+  }
 })
