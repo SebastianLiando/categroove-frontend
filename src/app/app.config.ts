@@ -5,6 +5,7 @@ import {routes} from './app.routes';
 import {providePrimeNG} from 'primeng/config';
 import {categroovePreset} from './styles/categroove-preset';
 import {provideHttpClient} from '@angular/common/http';
+import {provideLottieOptions} from 'ngx-lottie';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,6 +25,9 @@ export const appConfig: ApplicationConfig = {
         }
       }
     ),
-    provideHttpClient()
+    provideHttpClient(),
+    provideLottieOptions({
+      player: () => import('lottie-web')
+    })
   ]
 };
