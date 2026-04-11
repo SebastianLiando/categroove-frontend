@@ -25,7 +25,13 @@ describe('Equalizer', () => {
     fixture.componentRef.setInput('barCount', 100)
     await fixture.whenStable()
 
-    const bars = fixture.nativeElement.querySelectorAll(".eq")
-    expect(bars).toHaveLength(100)
+    let bars = fixture.nativeElement.querySelectorAll(".eq")
+    expect(bars).toHaveLength(100);
+
+    fixture.componentRef.setInput('barCount', 10);
+    await fixture.whenStable()
+
+    bars = fixture.nativeElement.querySelectorAll('.eq');
+    expect(bars).toHaveLength(10);
   })
 });
