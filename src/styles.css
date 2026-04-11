@@ -18,6 +18,26 @@ body {
   }
 }
 
+/* Banner notification overrides */
+.notification-banner .p-card-body {
+  padding: 0;
+}
+
+.notification-banner .p-accordionpanel {
+  border: none;
+}
+
+.notification-banner .p-accordionheader {
+  background: transparent;
+  justify-content: start;
+  align-items: center;
+}
+
+.notification-banner .p-accordioncontent-content {
+  background: transparent;
+  border: none;
+}
+
 /* Login with Spotify button in login page */
 .spotify-button .p-button {
   border: 1px solid var(--color-spotify-green-400);
