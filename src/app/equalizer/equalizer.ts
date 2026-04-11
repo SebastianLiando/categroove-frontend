@@ -18,7 +18,7 @@ export class Equalizer {
   animationSpeed = input(1)
 
   bars = computed(() => Array.from({length: this.barCount()}, (_, index) => index))
-  animationDelays = computed(() => Array.from({length: this.barCount()}, (_) => Math.random() * this.animationSpeed()))
+  animationDelays = computed(() => Array.from({length: this.barCount()}, () => Math.random() * this.animationSpeed()))
 
   getStyleForBar(index: number): Partial<CSSStyleDeclaration> {
     const animationName = index % 2 == 0 ? 'shorteq' : 'talleq'
