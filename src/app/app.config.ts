@@ -1,33 +1,33 @@
-import {ApplicationConfig, provideBrowserGlobalErrorListeners} from '@angular/core';
-import {provideRouter} from '@angular/router';
+import { ApplicationConfig, ErrorHandler, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { provideRouter } from '@angular/router';
 
-import {routes} from './app.routes';
-import {providePrimeNG} from 'primeng/config';
-import {categroovePreset} from './styles/categroove-preset';
-import {provideHttpClient} from '@angular/common/http';
-import {provideLottieOptions} from 'ngx-lottie';
+import { routes } from './app.routes';
+import { providePrimeNG } from 'primeng/config';
+import { categroovePreset } from './styles/categroove-preset';
+import { provideHttpClient } from '@angular/common/http';
+import { provideLottieOptions } from 'ngx-lottie';
+import { GlobalErrorHandler } from './error/global-error-handler';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
+    { provide: ErrorHandler, useClass: GlobalErrorHandler },
     provideRouter(routes),
-    providePrimeNG(
-      {
-        ripple: true,
-        theme: {
-          preset: categroovePreset,
-          options: {
-            cssLayer: {
-              name: 'primeng',
-              order: 'theme, base, primeng'
-            }
-          }
-        }
-      }
-    ),
+    providePrimeNG({
+      ripple: true,
+      theme: {
+        preset: categroovePreset,
+        options: {
+          cssLayer: {
+            name: 'primeng',
+            order: 'theme, base, primeng',
+          },
+        },
+      },
+    }),
     provideHttpClient(),
     provideLottieOptions({
-      player: () => import('lottie-web')
-    })
-  ]
+      player: () => import('lottie-web'),
+    }),
+  ],
 };

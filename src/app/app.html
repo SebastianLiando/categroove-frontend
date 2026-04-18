@@ -1,9 +1,16 @@
-<router-outlet/>
+<router-outlet />
 
-<div class="absolute top-8 right-8 flex flex-col gap-8 h-[calc(100vh-4rem)] overflow-x-hidden overflow-y-auto"
-     aria-live="polite" aria-relevant="additions">
+<div
+  class="pointer-events-none absolute top-8 right-8 flex h-[calc(100vh-4rem)] flex-col gap-8 overflow-x-hidden overflow-y-auto"
+  aria-live="polite"
+  aria-relevant="additions"
+>
   @for (notification of sortedNotifications(); track notification.id) {
-    <app-banner-notification [notification]="notification" (notificationClose)="removeNotification($event)"
-                             animate.enter="enter-animation" animate.leave="closing-animation"/>
+    <app-banner-notification
+      [notification]="notification"
+      (notificationClose)="removeNotification($event)"
+      animate.enter="enter-animation"
+      animate.leave="closing-animation"
+    />
   }
 </div>
