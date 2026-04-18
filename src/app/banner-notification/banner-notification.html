@@ -1,23 +1,38 @@
-<p-card [class]="`dark:bg-surface-800/60 backdrop-blur-xs notification-banner border ${notificationBorderColor()}`">
+<p-card
+  [class]="`notification-banner pointer-events-auto border backdrop-blur-xs dark:bg-surface-800/60 ${notificationBorderColor()} inline-lg`"
+>
   <p-accordion value="-1">
     <p-accordionpanel value="0">
       <p-accordion-header>
         <ng-template #toggleicon let-active="active">
-          <p-avatar [class]="`mr-2 ${notificationIconColor()}`" [icon]="notificationIcon()" shape="circle"/>
-          <p [class]="`font-semibold mr-2 w-80 ${notificationTextColor()}`">{{ notification().title }}</p>
+          <p-avatar
+            [class]="`mr-2 ${notificationIconColor()}`"
+            [icon]="notificationIcon()"
+            shape="circle"
+          />
+          <p [class]="`mr-2 grow font-semibold ${notificationTextColor()}`">
+            {{ notification().title }}
+          </p>
 
           <i [class]="active ? 'pi pi-chevron-up' : 'pi pi-chevron-down'"></i>
 
-          <span class="grow min-w-10"></span>
-
-          <p class="uppercase text-xs font-semibold text-muted-color tracking-wide mr-2">
+          <p
+            class="mx-2 text-xs font-semibold tracking-wide text-nowrap text-muted-color uppercase"
+          >
             {{ notificationDistanceFromNow | async }}
           </p>
-          <p-button icon="pi pi-times" severity="secondary" variant="text" size="small"
-                    (onClick)="closeNotification($event)" aria-label="Close notification"/>
+          <p-button
+            icon="pi pi-times"
+            severity="secondary"
+            variant="text"
+            size="small"
+            (onClick)="closeNotification($event)"
+            aria-label="Close notification"
+          />
         </ng-template>
       </p-accordion-header>
-      <p-accordion-content class="bg-transparent"><p class="text-muted-color">{{ notification().body }}</p>
+      <p-accordion-content class="bg-transparent"
+        ><p class="text-muted-color">{{ notification().body }}</p>
       </p-accordion-content>
     </p-accordionpanel>
   </p-accordion>
