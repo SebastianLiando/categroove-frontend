@@ -10,12 +10,28 @@ export class AuthenticationService {
   private readonly apiService = inject(CategrooveApiService)
   private _accessTokenData: TokenResponse | null = null
 
+  public get isAuthenticated() {
+    return this._accessTokenData !== null
+  }
+
   public get accessTokenData(): TokenResponse | null {
     return this._accessTokenData
   }
 
   private set accessTokenData(value: TokenResponse | null) {
     this._accessTokenData = value
+  }
+
+  public get redirectUrlAfterAuth() {
+    return sessionStorage.getItem('redirectUrlAfterAuth');
+  }
+
+  public set redirectUrlAfterAuth(value: string | null) {
+    if (value) {
+      sessionStorage.setItem('redirectUrlAfterAuth', value)
+    } else {
+      sessionStorage.removeItem('redirectUrlAfterAuth')
+    }
   }
 
   getLoginUrl() {
