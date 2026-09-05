@@ -27,15 +27,14 @@ export class LoginCallbackPage implements OnInit {
   });
   code = computed(() => this.queryParams()['code'] as string);
 
+  private async process() {
+    await this.authService.login(this.code());
+
+    const redirectUrl = this.authService.redirectUrlAfterAuth ?? '/dashboard';
+    await this.router.navigateByUrl(redirectUrl);
+  }
+
   ngOnInit() {
-    this.authService
-      .login(this.code())
-      .then(() => {
-        const redirectUrl = this.authService.redirectUrlAfterAuth ?? '/dashboard';
-        this.router.navigateByUrl(redirectUrl);
-      })
-      .catch(() => {
-        this.location.back();
-      });
+    this.process().catch(() => this.location.back());
   }
 }
